@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function NFTModel(props) {
   const [nft] = useState(props.nfts);
-
+  const tokenUrl = `https://uniquescan.io/opal/tokens/${nft.collectionId}/${nft.tokenId}`;
   return (
     <div
       className={` ${
@@ -68,7 +68,8 @@ function NFTModel(props) {
 
         {/* Link to NFT Details */}
         <Link
-          href={`/nftDetail/${nft.tokenId}`}
+          href={tokenUrl}
+          target="_blank"
           className="p-1 bg-[#593F9F] text-center rounded-tr-xl rounded-bl-xl text-sm font-semibold hover:bg-[#452a7a] transition"
         >
           See Detail &#8594;

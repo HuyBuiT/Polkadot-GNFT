@@ -44,7 +44,7 @@ function Banner() {
    return (
       <div id="Home" className=" w-full z-30 justify-center items-center flex flex-col text-white border-x-4 border-[#F7F7F9] p-[5%] gap-10 ">
          <p className=" text-5xl text-center px-[15%]">
-            Discovery the Future of Collectibles with our NFT Marketplace
+            Your first step into the NFT world with zero fee.
          </p>
          <p className=" text-sm px-[30%] text-center">
             Explore a wide variety of unique and one-of-a-kind digital assets, verified on
