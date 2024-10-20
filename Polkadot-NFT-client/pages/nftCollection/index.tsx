@@ -17,7 +17,7 @@ function Index() {
       try {
         const response = await axios.get('http://localhost:3000/api/get-tokens', {
           params: {
-            collectionId: 4055,  // Sending collectionId as query parameter
+            collectionId: 4122,  // Sending collectionId as query parameter
           },
           headers: {
             'Content-Type': 'application/json',

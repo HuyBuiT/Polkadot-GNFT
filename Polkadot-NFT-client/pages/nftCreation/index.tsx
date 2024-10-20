@@ -8,7 +8,7 @@ import Link from "next/link";
 import { mintNow, uploadImage } from "@/role/createNFT/createnft";
 
 function index() {
-   const [collectionId, setCollectionId] = useState(4055);
+   const [collectionId, setCollectionId] = useState(4122);
    const [ownerNFT, setOwnerNFT] = useState("");
    const [nameNFT, setNameNFT] = useState("");
    const [urlNFT, setUrlNFT] = useState("");

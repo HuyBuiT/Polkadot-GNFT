@@ -136,3 +136,8 @@ async function checkNFTExist(tokenId:number, collectionId: number) {
     return null;
   }
 }
+
+export async function burnNFT(tokenId: number) {
+   const res = await sdk.token.burn({collectionId: 4122, tokenId,});
+   return res;
+}

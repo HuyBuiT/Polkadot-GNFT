@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import { createCollection, getBalance, getCollection, getTokens, mintToken} from './service/index.js';
+import { createCollection, getBalance, getCollection, getTokens, mintToken, burnNFT} from './service/index.js';
 
 const app = express();
 const port = 3000;
@@ -17,6 +17,17 @@ app.use(cors());
 // Routes
 app.get('/', (res: Response) => {
     res.send('Hello, world!');
+});
+
+app.get('/api/burn', async (req: Request, res: any) => {
+    const tokenId = req.query.tokenId;
+    try {
+        const balance = await burnNFT(Number(tokenId));
+        return res.json({ balance });
+    } catch (error) {
+        console.error('Error burn NFT:', error);
+        return res.status(500).json({ error: 'Failed to burn NFT' });
+    }
 });
 
 // Define the /api/balance endpoint
@@ -89,3 +100,4 @@ app.get('/api/get-tokens', async (req: Request, res: any) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
