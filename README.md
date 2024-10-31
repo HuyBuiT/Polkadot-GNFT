@@ -39,3 +39,22 @@ By eliminating fees and simplifying the process, we hope to encourage more peopl
 - **Expansion of AI Capabilities**: We plan to continuously improve the AI tools for more dynamic image and text generation.
 - **Additional Blockchain Integrations**: In the future, we plan to integrate with more blockchains to offer even more flexibility to users.
 - **Community Features**: We aim to introduce features to engage the GNFT community, including collaborations, contests, and more!
+
+**How to run this project on local**
+
+**Backend setup**
+
+ ``cd Polkadot-NFT-server``
+ 
+ ``npm install``
+ 
+ ``npm run start``
+ 
+**Frontend setup**
+
+ ``cd Polkadot-NFT-client``
+ 
+ ``npm install``
+ 
+ ``npm run dev``
+
